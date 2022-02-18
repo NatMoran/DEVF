@@ -58,17 +58,20 @@ i{
 }
 
 #slider{
-    display: flex;
-    height: 441px;
+    width: 92%;
     margin: 50px 4%;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     border-radius: 6px;
-    background-image: url("https://picsum.photos/1350/320");
+    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/3BC03FEDAC04806B750EBC0E372738EAF703432333A2811A9BBF403BD00C5297/compose?width=1440&aspectRatio=3.91&format=jpeg&label=disneyplusoriginal_391");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 
+}
+
+#slider img{
+    background-color: transparent;
 }
 
 #slider:hover{
@@ -78,55 +81,75 @@ i{
 #gallery{
     padding: 0 4%;
     display: grid;
-    gap: 1rem;
-    grid-auto-rows: 16rem;
-    grid-template-columns: repeat(5, 1fr );
+    gap: 5rem 1rem;
+    grid-auto-rows: 12rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
 }
 
 .family{
-    width: 100%;
-    height: 185px;
     background-position: center;
+    background-repeat: none;
     border: 3px solid rgb(105, 105, 105);
     border-radius: 6px;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-}
-
-.family:hover{
-    transform: scale(1.03);
-    border: 3px solid rgb(190, 190, 190) ;
+    background-image: linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50)) ;
 }
 
 .disney{
-    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FFA0BEBAC1406D88929497501C84019EBBA1B018D3F7C4C3C829F1810A24AD6E/scale?width=400&aspectRatio=1.78&format=png") , linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50)) ;
+    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FFA0BEBAC1406D88929497501C84019EBBA1B018D3F7C4C3C829F1810A24AD6E/scale?width=400&aspectRatio=1.78&format=png") ,  linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50));
 }
 
 .pixar{
-    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7F4E1A299763030A0A8527227AD2812C049CE3E02822F7EDEFCFA1CFB703DDA5/scale?width=400&aspectRatio=1.78&format=png") , linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50)) ;
+    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7F4E1A299763030A0A8527227AD2812C049CE3E02822F7EDEFCFA1CFB703DDA5/scale?width=400&aspectRatio=1.78&format=png") ,  linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50));
 }
 
 .marvel{
-    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C90088DCAB7EA558159C0A79E4839D46B5302B5521BAB1F76D2E807D9E2C6D9A/scale?width=400&aspectRatio=1.78&format=png") , linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50)) ;
+    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C90088DCAB7EA558159C0A79E4839D46B5302B5521BAB1F76D2E807D9E2C6D9A/scale?width=400&aspectRatio=1.78&format=png") ,  linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50));
 }
 
-.starwars{
-    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5A9416D67DC9595496B2666087596EE64DE379272051BB854157C0D938BE2C26/scale?width=400&aspectRatio=1.78&format=png") , linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50)) ;
+.sw{
+    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5A9416D67DC9595496B2666087596EE64DE379272051BB854157C0D938BE2C26/scale?width=400&aspectRatio=1.78&format=png") ,  linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50));
 }
 
 .natgeo{
-    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2EF24AA0A1E648E6D1A3B26491F516632137ED87AB22969D153316F8BD670FB5/scale?width=400&aspectRatio=1.78&format=png") , linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50)) ;
+    background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2EF24AA0A1E648E6D1A3B26491F516632137ED87AB22969D153316F8BD670FB5/scale?width=400&aspectRatio=1.78&format=png") ,  linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50));
 }
 
-.celda img{
+.video-bg{
+    display: block;
+    opacity: 0;
+    border-radius: 4px;
+    border-bottom: 3px solid rgb(190, 190, 190);
+    object-fit: cover;
     width: 100%;
-    height: 185px;
+  }
+
+.logo-family{
+    position: relative;
+    display: block;
+    opacity: 0;
+    top: -108.5%;
+    left: -10%;
+    background-color: transparent;
+}
+
+.celda:hover , .family:hover{
+    transform: scale(1.03);
+    border: 3px solid rgb(190, 190, 190) ;
+    cursor: pointer;
+}
+
+.family:hover .logo-family , .family:hover .video-bg{
+    opacity: 1;
+}
+
+.celda{
+    display: block;
+    overflow: hidden;
     border-radius: 6px;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
 }
-
-video {
+.celda img{
     width: 100%;
-    height: 100%;
-    display: none;
-    cursor: pointer;
-  }
+    object-fit: cover;
+}
