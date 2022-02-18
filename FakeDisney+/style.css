@@ -67,6 +67,7 @@ i{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 
 }
 
@@ -83,12 +84,12 @@ i{
     display: grid;
     gap: 5rem 1rem;
     grid-auto-rows: 12rem;
-    grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100% , 20rem),1fr));
 }
 
 .family{
     background-position: center;
-    background-repeat: none;
+    background-repeat: no-repeat;
     border: 3px solid rgb(105, 105, 105);
     border-radius: 6px;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
